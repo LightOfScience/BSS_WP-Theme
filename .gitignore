@@ -1,3 +1,7 @@
+# Ignore everything
 *
-!wp-content
-!favicon.ico
+# But descend into directories
+!*/
+# Recursively allow files under subtree
+!/wp-content/themes/brekthroughsciencesociety/**
+!.gitignore
