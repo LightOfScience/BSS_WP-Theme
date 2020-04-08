@@ -30,20 +30,21 @@ function custom_post_types() {
         'menu_icon' => 'dashicons-admin-site-alt3',
         'has_archive' => true,
         'supports' => array('title', 'editor', 'thumbnail',‘revisions’, ‘trackbacks’, ‘excerpt’, ‘page-attributes’, 'comments', 'post-formats'),
+        'taxonomies' => array('topics', 'category', 'post_tag' ),
         'rewrite' => array('slug' => 'archive', 'pages' => true, 'delete_with_user'=>false),
     );
     register_post_type('archive', $archiveArgs);
 
-    // Whae
-    $xxx = array(
+    // News
+    $newsArgs = array(
         'labels' => array(
-            'name' => 'xxx',
-            'singular_name' => 'xxx',
-            'add_new' => 'xxx',
-            'add_new_item' => 'xxx',
-            'edit_item' => "xxx",
+            'name' => 'News',
+            'singular_name' => 'News',
+            'add_new' => 'Add News',
+            'add_new_item' => 'Add New',
+            'edit_item' => "Edit News",
             ),
-        'description' => "Breakthrough Science Society Archive",
+        'description' => "Mews",
         'public' => true,
         'hierarchical' => true,
         'exclude_from_search' => false,
@@ -51,13 +52,23 @@ function custom_post_types() {
         'menu_position' => 4,
         'menu_icon' => 'dashicons-admin-site-alt3',
         'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail',‘revisions’, ‘trackbacks’, ‘excerpt’, ‘page-attributes’, 'comments', 'post-formats'),
-        'rewrite' => array('slug' => 'xxx', 'pages' => true, 'delete_with_user'=>false),
+        'supports' => array('title', 'editor', 'thumbnail', ‘revisions’, ‘trackbacks’, ‘excerpt’, ‘page-attributes’, 'comments', 'post-formats'),
+        'taxonomies' => array('category', 'topics', 'post_tag'),
+        'rewrite' => array('slug' => 'news', 'pages' => true, 'delete_with_user'=>false),
     );
-    register_post_type('xxx', $xxx);
+    register_post_type('news', $newsArgs);
 
 }
 add_action( 'init', 'custom_post_types' );    
+
+
+function custom_taxonomy()
+{
+        //Category taxonm
+
+
+}
+
 
 
 ?>

@@ -10,7 +10,7 @@
 
 <body>
     
-    <header>
+    <header id="header">
         <div id="org-banner">
             <div id="org-motto">
                 <h1>Science for Society</h1>
@@ -27,7 +27,7 @@
                     <ul id="nav-wrapper">
                         <li class="nav-element"><a href="/" class="nav-link"><button>Home</button></a></li>
                         <li class="nav-element">
-                            <a href="#!" class="nav-link"><button>News</button></a>
+                            <a href="/news/" class="nav-link"><button>News</button></a>
                             <ul class="sub-menu-wrapper" style="display:none;s">
                                 <li class="sub-menu-item"><a href=""></a></li>
                                 <li class="sub-menu-item"><a href=""></a></li>
