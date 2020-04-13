@@ -30,6 +30,7 @@ function custom_post_types() {
         'menu_icon' => 'dashicons-admin-site-alt3',
         'has_archive' => true,
         'supports' => array('title', 'editor', 'thumbnail',‘revisions’, ‘trackbacks’, ‘excerpt’, ‘page-attributes’, 'comments', 'post-formats'),
+        'show_in_rest' => true,
         'taxonomies' => array('topics', 'category', 'post_tag' ),
         'rewrite' => array('slug' => 'archive', 'pages' => true, 'delete_with_user'=>false),
     );
@@ -53,6 +54,7 @@ function custom_post_types() {
         'menu_icon' => 'dashicons-admin-site-alt3',
         'has_archive' => true,
         'supports' => array('title', 'editor', 'thumbnail', ‘revisions’, ‘trackbacks’, ‘excerpt’, ‘page-attributes’, 'comments', 'post-formats'),
+        'show_in_rest' => true,
         'taxonomies' => array('category', 'topics', 'post_tag'),
         'rewrite' => array('slug' => 'news', 'pages' => true, 'delete_with_user'=>false),
     );
@@ -70,5 +72,8 @@ function custom_taxonomy()
 }
 
 
+add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+add_post_type_support( 'archive', 'editor' );
 
 ?>
